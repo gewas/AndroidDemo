@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.icer.scrollerdemo.SlideMenu xmlns:android="http://schemas.android.com/apk/res/android"
+                                 android:id="@+id/slide_menu"
+                                 android:layout_width="match_parent"
+                                 android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/menu"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#ffdddddd">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:text="Menu Item 1"
+            android:textSize="16sp"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#ffffffff"
+            android:padding="8dp">
+
+            <Button
+                android:id="@+id/slide_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Slide"/>
+
+        </RelativeLayout>
+    </RelativeLayout>
+
+</com.icer.scrollerdemo.SlideMenu>
