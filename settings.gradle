@@ -1,1 +1,1 @@
-include ':scrollerdemo', ':transsystembar', ':multiitemtypelistviewdemo', ':dialogfragmentdemo'
+include ':scrollerdemo', ':transsystembar', ':multiitemtypelistviewdemo', ':dialogfragmentdemo', ':contacts'
