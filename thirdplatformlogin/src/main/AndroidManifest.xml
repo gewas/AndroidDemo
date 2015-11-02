@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<manifest package="com.icer.thirdplatformlogin"
-          xmlns:android="http://schemas.android.com/apk/res/android">
+<manifest
+    package="com.icer.thirdplatformlogin"
+    xmlns:android="http://schemas.android.com/apk/res/android">
 
     <!-- Frontia框架的公共权限 -->
     <uses-permission android:name="android.permission.INTERNET"/>
@@ -29,7 +30,7 @@
         android:label="@string/app_name"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".baidu.SocialActivity"
+            android:name=".MainActivity"
             android:configChanges="orientation|keyboardHidden"
             android:label="@string/app_name"
             android:screenOrientation="portrait">
@@ -46,6 +47,10 @@
             android:screenOrientation="portrait"
             android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen">
         </activity>
+
+        <activity
+            android:name=".weibo.WeiboActivity"
+            android:screenOrientation="portrait"/>
 
     </application>
 
