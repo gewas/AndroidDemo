@@ -17,8 +17,10 @@
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="20dp"
-        android:textSize="24sp"
-        android:text="@string/start"/>
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:text="@string/start"
+        android:textSize="24sp"/>
 
     <EditText
         android:id="@+id/ssid"
