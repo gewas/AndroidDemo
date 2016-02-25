@@ -9,6 +9,7 @@
     android:paddingTop="@dimen/activity_vertical_margin">
 
     <com.icer.listviewdemo.customView.FlexibleListView
+        android:id="@+id/lv1"
         android:layout_width="match_parent"
         android:layout_height="match_parent"/>
 </RelativeLayout>
