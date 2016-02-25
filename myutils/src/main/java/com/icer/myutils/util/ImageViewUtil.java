@@ -30,7 +30,7 @@ public class ImageViewUtil {
         } else {
             ratio = imageHeight / imageWidth;
         }
-        lp.width = activity.getWindowManager().getDefaultDisplay().getWidth() - ScreenUtil.dipTopx(activity, leftMargin) - ScreenUtil.dipTopx(activity, rightMargin);
+        lp.width = activity.getWindowManager().getDefaultDisplay().getWidth() - ScreenUtil.dip2Px(activity, leftMargin) - ScreenUtil.dip2Px(activity, rightMargin);
         lp.height = (int) (ratio * activity.getWindowManager().getDefaultDisplay().getWidth());
         iv.setLayoutParams(lp);
     }
