@@ -1,4 +1,4 @@
-package com.icer.myutils.util;
+package com.icer.myutils.util.text;
 
 
 @SuppressWarnings("ALL")

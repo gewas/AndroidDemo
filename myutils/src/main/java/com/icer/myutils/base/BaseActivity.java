@@ -9,8 +9,8 @@ import android.view.MotionEvent;
 import android.widget.Toast;
 
 import com.icer.myutils.constant.Functional;
-import com.icer.myutils.util.Loger;
-import com.icer.myutils.util.ScreenUtil;
+import com.icer.myutils.util.common.Loger;
+import com.icer.myutils.util.common.ScreenUtil;
 
 /**
  * Created by icer on 2016/2/25.

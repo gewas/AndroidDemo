@@ -1,4 +1,4 @@
-package com.icer.myutils.util;
+package com.icer.myutils.util.common;
 
 import android.content.Context;
 import android.util.DisplayMetrics;

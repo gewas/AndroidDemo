@@ -5,9 +5,9 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-import com.icer.myutils.base.BaseActivity;
+import com.icer.myutils.base.UIActivity;
 
-public class MainActivity extends BaseActivity implements View.OnClickListener {
+public class MainActivity extends UIActivity implements View.OnClickListener {
 
     private Button mButton1;
 
@@ -19,12 +19,24 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
         regListener();
     }
 
-    private void initView() {
+    @Override
+    protected void initData() {
+
+    }
+
+    @Override
+    protected void initView() {
         mButton1 = (Button) findViewById(R.id.main_btn_1);
     }
 
-    private void regListener() {
+    @Override
+    protected void regListener() {
         mButton1.setOnClickListener(this);
+    }
+
+    @Override
+    protected void fillData() {
+
     }
 
     @Override

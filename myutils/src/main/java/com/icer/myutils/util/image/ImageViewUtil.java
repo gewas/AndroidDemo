@@ -1,10 +1,12 @@
-package com.icer.myutils.util;
+package com.icer.myutils.util.image;
 
 import android.app.Activity;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+
+import com.icer.myutils.util.common.ScreenUtil;
 
 @SuppressWarnings("ALL")
 public class ImageViewUtil {
