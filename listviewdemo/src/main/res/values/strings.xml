@@ -1,4 +1,11 @@
 <resources>
     <string name="app_name">ListViewDemo</string>
+
     <string name="main_button_1">弹性ListView</string>
+    <string name="main_button_2">跳位ListView</string>
+
+    <string name="ui2_button_1">跳至指定item</string>
+    <string name="ui2_button_2">滑至指定item</string>
+    <string name="ui2_button_3">滑动指定距离</string>
+
 </resources>
