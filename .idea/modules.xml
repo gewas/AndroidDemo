@@ -10,7 +10,6 @@
       <module fileurl="file://$PROJECT_DIR$/myutils/myutils.iml" filepath="$PROJECT_DIR$/myutils/myutils.iml" />
       <module fileurl="file://$PROJECT_DIR$/scrollerdemo/scrollerdemo.iml" filepath="$PROJECT_DIR$/scrollerdemo/scrollerdemo.iml" />
       <module fileurl="file://$PROJECT_DIR$/textviewlinkdemo/textviewlinkdemo.iml" filepath="$PROJECT_DIR$/textviewlinkdemo/textviewlinkdemo.iml" />
-      <module fileurl="file://$PROJECT_DIR$/thirdplatformlogin/thirdplatformlogin.iml" filepath="$PROJECT_DIR$/thirdplatformlogin/thirdplatformlogin.iml" />
       <module fileurl="file://$PROJECT_DIR$/transsystembar/transsystembar.iml" filepath="$PROJECT_DIR$/transsystembar/transsystembar.iml" />
       <module fileurl="file://$PROJECT_DIR$/wifihotspot/wifihotspot.iml" filepath="$PROJECT_DIR$/wifihotspot/wifihotspot.iml" />
     </modules>
