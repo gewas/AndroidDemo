@@ -6,3 +6,4 @@ adb uninstall com.icer.scrollerdemo
 adb uninstall com.icer.textviewlinkdemo
 adb uninstall com.icer.transsystembar
 adb uninstall com.icer.wifihotspot
+adb uninstall com.icer.mvpdemo
