@@ -7,6 +7,7 @@
       <module fileurl="file://$PROJECT_DIR$/dialogfragmentdemo/dialogfragmentdemo.iml" filepath="$PROJECT_DIR$/dialogfragmentdemo/dialogfragmentdemo.iml" />
       <module fileurl="file://$PROJECT_DIR$/listviewdemo/listviewdemo.iml" filepath="$PROJECT_DIR$/listviewdemo/listviewdemo.iml" />
       <module fileurl="file://$PROJECT_DIR$/multiitemtypelistviewdemo/multiitemtypelistviewdemo.iml" filepath="$PROJECT_DIR$/multiitemtypelistviewdemo/multiitemtypelistviewdemo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/mvpdemo/mvpdemo.iml" filepath="$PROJECT_DIR$/mvpdemo/mvpdemo.iml" />
       <module fileurl="file://$PROJECT_DIR$/myutils/myutils.iml" filepath="$PROJECT_DIR$/myutils/myutils.iml" />
       <module fileurl="file://$PROJECT_DIR$/scrollerdemo/scrollerdemo.iml" filepath="$PROJECT_DIR$/scrollerdemo/scrollerdemo.iml" />
       <module fileurl="file://$PROJECT_DIR$/textviewlinkdemo/textviewlinkdemo.iml" filepath="$PROJECT_DIR$/textviewlinkdemo/textviewlinkdemo.iml" />
