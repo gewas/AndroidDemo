@@ -22,16 +22,21 @@ public class TextViewUtil {
 
     /**
      * 在TextView文字内容为"xxxxxxx(marker)yyyyyyy"时,向目标位置(marker)后填充指定颜色的文字内容,并去掉"yyyyyyy".
+     *
+     * @param text           填充的文字内容
+     * @param defaultColorId R.color.xxx 如果不想改变默认颜色(标志前的文字颜色),可以填null
+     * @param contentColorId R.color.xxx
      */
-    public static void setSubColorTextAfterMarker(Context context, TextView tv, String marker, String text, Integer defaultColorId, int contentColorId) {
+    public static void setSubColorTextAfterMarker(Context context, TextView tv, String marker, String text, Integer defaultColorId, Integer contentColorId) {
         if (text == null || text.length() == 0)
             text = "";
         if (defaultColorId != null)
-            tv.setTextColor(defaultColorId);
+            tv.setTextColor(context.getResources().getColor(defaultColorId));
         tv.setText(tv.getText().toString().substring(0, tv.getText().toString().indexOf(marker) + 1) + "%s");
         String foo = String.format(tv.getText().toString(), text);
         SpannableStringBuilder style = new SpannableStringBuilder(foo);
-        style.setSpan(new ForegroundColorSpan(context.getResources().getColor(contentColorId)), foo.indexOf(marker) + 1, foo.length(), Spannable.SPAN_INCLUSIVE_EXCLUSIVE);
+        if (contentColorId != null)
+            style.setSpan(new ForegroundColorSpan(context.getResources().getColor(contentColorId)), foo.indexOf(marker) + 1, foo.length(), Spannable.SPAN_INCLUSIVE_EXCLUSIVE);
         tv.setText(style);
     }
 
@@ -42,15 +47,15 @@ public class TextViewUtil {
      * 占位符数必须和想填入的字符串数目一致;
      *
      * @param texts             如果可变参数长度为0,不做处理;如果文字长度为0,默认为""
-     * @param defaultColorId    R.color.xxx 如果不想改变默认颜色(冒号前的文字颜色),可以填null
+     * @param defaultColorId    R.color.xxx 如果不想改变默认颜色(标志前的文字颜色),可以填null
      * @param newContentColorId R.color.xxx
      */
-    public static void setSubColorText(Context context, TextView tv, Integer defaultColorId, int newContentColorId, String... texts) {
+    public static void setSubColorText(Context context, TextView tv, Integer defaultColorId, Integer newContentColorId, String... texts) {
 
         if (texts != null) {
             if (texts.length == 1) {//单格式化参数情况
                 if (defaultColorId != null)//1.如果有设置改编默认文字颜色,给予改变
-                    tv.setTextColor(defaultColorId);
+                    tv.setTextColor(context.getResources().getColor(defaultColorId));
 
                 String text = texts[0];
                 if (TextUtils.isEmpty(text))//2.如果文字内容为null或者长度0,默认其为""
@@ -64,13 +69,14 @@ public class TextViewUtil {
 
                 if (indexEnd > indexStart) {//4.如果有必要换色,执行
                     SpannableStringBuilder style = new SpannableStringBuilder(foo);
-                    style.setSpan(new ForegroundColorSpan(context.getResources().getColor(newContentColorId)), indexStart, indexEnd, Spannable.SPAN_INCLUSIVE_EXCLUSIVE);
+                    if (newContentColorId != null)
+                        style.setSpan(new ForegroundColorSpan(context.getResources().getColor(newContentColorId)), indexStart, indexEnd, Spannable.SPAN_INCLUSIVE_EXCLUSIVE);
                     tv.setText(style);
                 }
 
             } else if (texts.length > 1) {//多格式化
                 if (defaultColorId != null)//1.如果有设置改编默认文字颜色,给予改变
-                    tv.setTextColor(defaultColorId);
+                    tv.setTextColor(context.getResources().getColor(defaultColorId));
 
                 int[] indexesStart = new int[texts.length];
                 int[] indexesEnd = new int[texts.length];
@@ -99,7 +105,8 @@ public class TextViewUtil {
                 SpannableStringBuilder style = new SpannableStringBuilder(foo);
                 for (int i = 0; i < texts.length; i++) {
                     if (indexesEnd[i] > indexesStart[i])//4.如果有必要换色,执行
-                        style.setSpan(new ForegroundColorSpan(context.getResources().getColor(newContentColorId)), indexesStart[i], indexesEnd[i], Spannable.SPAN_INCLUSIVE_EXCLUSIVE);
+                        if (newContentColorId != null)
+                            style.setSpan(new ForegroundColorSpan(context.getResources().getColor(newContentColorId)), indexesStart[i], indexesEnd[i], Spannable.SPAN_INCLUSIVE_EXCLUSIVE);
                 }
                 tv.setText(style);
             }
