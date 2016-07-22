@@ -25,7 +25,7 @@ public class BaseActivity extends AppCompatActivity {
     private float yDown;
     private boolean isSwipeFinish;
 
-    private long mLastClickTime;
+    private long mLastClickTime = System.currentTimeMillis();
 
     @Override
     protected void onDestroy() {
@@ -112,17 +112,11 @@ public class BaseActivity extends AppCompatActivity {
         sendBroadcast(new Intent(Functional.SUICIDE));
     }
 
-    public synchronized boolean isFastDoubleClick() {
+    public synchronized boolean isQuickClick() {
         long time = System.currentTimeMillis();
-        if (mLastClickTime > time) {
-            mLastClickTime = time;
-            return false;
-        }
-        if (time - mLastClickTime < 500) {
-            return true;
-        }
+        boolean res = time - mLastClickTime < 500;
         mLastClickTime = time;
-        return false;
+        return res;
     }
 
     public String getTag() {
