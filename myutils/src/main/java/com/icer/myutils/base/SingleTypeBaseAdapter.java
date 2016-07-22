@@ -25,6 +25,14 @@ public abstract class SingleTypeBaseAdapter<T> extends android.widget.BaseAdapte
         mData = data;
     }
 
+    public Context getContext() {
+        return mContext;
+    }
+
+    public ArrayList<T> getData() {
+        return mData;
+    }
+
     protected abstract int getItemLayout();
 
     protected abstract Class<? extends BaseViewHolder> getViewHolderClass();

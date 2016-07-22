@@ -25,6 +25,14 @@ public abstract class MultiTypeBaseAdapter<T> extends android.widget.BaseAdapter
         mData = data;
     }
 
+    public Context getContext() {
+        return mContext;
+    }
+
+    public ArrayList<T> getData() {
+        return mData;
+    }
+
     protected abstract int getItemTypeCount();
 
     protected abstract int getItemType(int position);
