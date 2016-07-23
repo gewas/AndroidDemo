@@ -5,7 +5,7 @@ import android.util.Log;
 /**
  * Created by icer on 2016/2/25.
  */
-public class Loger {
+public class Logger {
     private static final int LEVEL_D = 0;
     private static final int LEVEL_I = 1;
     private static final int LEVEL_W = 2;
@@ -28,7 +28,6 @@ public class Loger {
     }
 
     private static void log(int level, String tag, String msg) {
-//        if(IS_IN_DEV)
         switch (level) {
             case LEVEL_D: {
                 Log.d(tag, msg);

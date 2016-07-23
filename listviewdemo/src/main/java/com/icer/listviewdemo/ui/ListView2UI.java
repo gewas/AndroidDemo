@@ -63,21 +63,21 @@ public class ListView2UI extends UIActivity implements View.OnClickListener {
             case R.id.ui2_btn1: {
                 int position = RandomDataUtil.nextInt(mData.size());
                 mListView.setSelection(position);
-                showToast("Item: " + position);
+                showToastShort("Item: " + position);
             }
             break;
 
             case R.id.ui2_btn2: {
                 int position = RandomDataUtil.nextInt(mData.size());
                 mListView.smoothScrollToPosition(position);
-                showToast("Item: " + position);
+                showToastShort("Item: " + position);
             }
             break;
             case R.id.ui2_btn3: {
                 int position = RandomDataUtil.nextInt(mData.size());
                 int pn = RandomDataUtil.aBoolean() ? -1 : 1;
                 mListView.smoothScrollBy(pn * position * 50, 1000);
-                showToast("Distance: " + pn * position * 50);
+                showToastShort("Distance: " + pn * position * 50);
             }
             break;
         }
