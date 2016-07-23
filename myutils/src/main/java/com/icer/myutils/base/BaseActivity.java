@@ -2,6 +2,7 @@ package com.icer.myutils.base;
 
 import android.content.Context;
 import android.content.Intent;
+import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.MotionEvent;
 import android.widget.Toast;
@@ -32,10 +33,47 @@ public abstract class BaseActivity extends AppCompatActivity {
     private long mLastClickTime = System.currentTimeMillis();
 
     @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        int layoutResId = bindLayout();
+        if (layoutResId != 0)
+            setContentView(layoutResId);
+        initData();
+        initView();
+        initEvent();
+        doBusiness();
+    }
+
+    protected abstract int bindLayout();
+
+    protected void initData() {
+    }
+
+    protected void initView() {
+    }
+
+    protected void initEvent() {
+    }
+
+    protected void doBusiness() {
+    }
+
+    @Override
     protected void onDestroy() {
-        super.onDestroy();
-        if (mSuicideReceiver != null)
+        if (mSuicideReceiver != null) {
             unregisterReceiver(mSuicideReceiver);
+            mSuicideReceiver = null;
+        }
+        super.onDestroy();
+    }
+
+    @Override
+    public void finish() {
+        if (mSuicideReceiver != null) {
+            unregisterReceiver(mSuicideReceiver);
+            mSuicideReceiver = null;
+        }
+        super.finish();
     }
 
     @Override

@@ -1,41 +1,22 @@
 package com.icer.listviewdemo.ui;
 
 import android.content.Intent;
-import android.os.Bundle;
 import android.view.View;
 
 import com.icer.listviewdemo.R;
-import com.icer.myutils.base.UIActivity;
+import com.icer.myutils.base.BaseActivity;
 
-public class MainActivity extends UIActivity implements View.OnClickListener {
+public class MainActivity extends BaseActivity implements View.OnClickListener {
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-        initView();
-        regListener();
+    protected int bindLayout() {
+        return R.layout.activity_main;
     }
 
     @Override
-    protected void initData() {
-
-    }
-
-    @Override
-    protected void initView() {
-
-    }
-
-    @Override
-    protected void regListener() {
+    protected void initEvent() {
         findViewById(R.id.main_btn_1).setOnClickListener(this);
         findViewById(R.id.main_btn_2).setOnClickListener(this);
-    }
-
-    @Override
-    protected void fillData() {
-
     }
 
     @Override
